@@ -14,8 +14,8 @@ public class Principal {
         //pila.mostrar();
 
         AlgoritmosPila ap = new AlgoritmosPila();
-
-        /*System.out.println(ap.sumaNPila(pila, 3));
+/*
+        System.out.println(ap.sumaNPila(pila, 3));
         System.out.println(ap.sumaNPila(pila, 8));
         System.out.println(ap.sumaNPila(pila, 0));
         System.out.println(ap.sumaNPila(pila, -2));
@@ -26,13 +26,30 @@ public class Principal {
         System.out.println(ap.sumaNPila(pila1, 2));*/
 
         // 2.3. Algoritmo copiaPila
-        pila.mostrar();
+        /*pila.mostrar();
 
         Pila otraPila = ap.copiaPila(pila);
         otraPila.apilar(2);
 
         pila.mostrar();
-        otraPila.mostrar();
+        otraPila.mostrar();*/
+
+        // 3.1 Algoritmo sumaNPilaRec
+        pila.mostrar();
+
+        System.out.println(ap.sumaNPilaRec(pila, 3));
+        System.out.println(ap.sumaNPilaRec(pila, 8));
+        System.out.println(ap.sumaNPilaRec(pila, 0));
+        System.out.println(ap.sumaNPilaRec(pila, -2));
+
+        pila.mostrar();
+
+        Pila pilaVacia = new Pila();
+        System.out.println(ap.sumaNPilaRec(pilaVacia, 2));
+
+        // 3.2 Algoritmo copiaPilaRec
+
+
     }
 
 }
