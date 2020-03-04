@@ -1,7 +1,7 @@
 public class Principal {
 
     public static void main(String[] args) {
-        // 2.2. Algoritmo sumaNPila
+        // 2.2. Algoritmo sumaNPila //
 
         Pila pila = new Pila();
 
@@ -25,7 +25,7 @@ public class Principal {
         Pila pila1 = new Pila();
         System.out.println(ap.sumaNPila(pila1, 2));*/
 
-        // 2.3. Algoritmo copiaPila
+        // 2.3. Algoritmo copiaPila //
         /*pila.mostrar();
 
         Pila otraPila = ap.copiaPila(pila);
@@ -34,8 +34,8 @@ public class Principal {
         pila.mostrar();
         otraPila.mostrar();*/
 
-        // 3.1 Algoritmo sumaNPilaRec
-        pila.mostrar();
+        // 3.1 Algoritmo sumaNPilaRec //
+        /*pila.mostrar();
 
         System.out.println(ap.sumaNPilaRec(pila, 3));
         System.out.println(ap.sumaNPilaRec(pila, 8));
@@ -45,10 +45,16 @@ public class Principal {
         pila.mostrar();
 
         Pila pilaVacia = new Pila();
-        System.out.println(ap.sumaNPilaRec(pilaVacia, 2));
+        System.out.println(ap.sumaNPilaRec(pilaVacia, 2));*/
 
-        // 3.2 Algoritmo copiaPilaRec
+        // 3.2 Algoritmo copiaPilaRec //
+        pila.mostrar();
 
+        Pila otraPila = ap.copiaPilaRec(pila);
+        otraPila.apilar(2);
+
+        pila.mostrar();
+        otraPila.mostrar();
 
     }
 

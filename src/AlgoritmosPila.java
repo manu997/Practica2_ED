@@ -41,15 +41,25 @@ public class AlgoritmosPila {
         } else {
             int cima = pila.getCima();
             pila.quitarCima();
-            suma = cima + sumaNPilaRec(pila, n-1);;
+            suma = cima + sumaNPilaRec(pila, n-1);
             pila.apilar(cima);
         }
         return suma;
     }
 
     public Pila copiaPilaRec(Pila pila) {
-        // TODO Implementar este método
-        return null;  // Eliminar el return al implementar el método
+        Pila otraPila;
+        if(pila.vacia()) {
+            otraPila = new Pila();
+            return otraPila;
+        } else {
+            int cima = pila.getCima();
+            pila.quitarCima();
+            otraPila = copiaPilaRec(pila);
+            otraPila.apilar(cima);
+            pila.apilar(cima);
+        }
+        return otraPila;
     }
 
 }
