@@ -63,11 +63,11 @@ public class Principal {
         cola.encolar(2);
         cola.encolar(6);
         cola.mostrar();
-        AlgoritmosPila ap1 = new AlgoritmosPila();
-        ap.invertirCola(cola);
+        AlgoritmosCola ac = new AlgoritmosCola();
+        ac.invertirCola(cola);
         cola.mostrar();
         Cola colaVacia = new Cola();
-        ap.invertirCola(colaVacia);
+        ac.invertirCola(colaVacia);
 
         System.out.println();
 
@@ -75,9 +75,9 @@ public class Principal {
 
         cola.encolar(2);
         cola.mostrar();
-        ap.eliminarUltimoCola(cola);
+        ac.eliminarUltimoCola(cola);
         cola.mostrar();
         Cola colaVacia1 = new Cola();
-        ap.eliminarUltimoCola(colaVacia);
+        ac.eliminarUltimoCola(colaVacia);
     }
 }
