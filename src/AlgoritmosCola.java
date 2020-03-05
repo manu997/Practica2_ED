@@ -16,8 +16,7 @@ public class AlgoritmosCola {
             while (!cola.vacia()) {
                 pilaAux.apilar(cola.desencolar());
             }
-            int ultimoCola = pilaAux.getCima();
-            pilaAux.quitarCima();
+            int ultimoCola = pilaAux.desapilar();
             while (!pilaAux.vacia()) {
                 if (pilaAux.getCima() == ultimoCola) {
                     pilaAux.quitarCima();

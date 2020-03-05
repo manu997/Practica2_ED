@@ -18,12 +18,8 @@ public class AlgoritmosPila {
     public Pila copiaPila(Pila pila) {
         Pila otraPila = new Pila();
         Pila pilaAux = new Pila();
-        int contador = 0;
-        int finalizaContador = pila.getNumElementos();
-        while(contador != finalizaContador) {
-            pilaAux.apilar(pila.getCima());
-            pila.quitarCima();
-            contador++;
+        while(!pila.vacia()) {
+            pilaAux.apilar(pila.desapilar());
         }
         while (!pilaAux.vacia()) {
             pila.apilar(pilaAux.getCima());
@@ -36,11 +32,8 @@ public class AlgoritmosPila {
         int suma;
         if(n <= 0 || pila.vacia()) {
             return 0;
-        } else if (n == 1 && !pila.vacia()){
-            return pila.getCima();
         } else {
-            int cima = pila.getCima();
-            pila.quitarCima();
+            int cima = pila.desapilar();
             suma = cima + sumaNPilaRec(pila, n-1);
             pila.apilar(cima);
         }
@@ -53,8 +46,7 @@ public class AlgoritmosPila {
             otraPila = new Pila();
             return otraPila;
         } else {
-            int cima = pila.getCima();
-            pila.quitarCima();
+            int cima = pila.desapilar();
             otraPila = copiaPilaRec(pila);
             otraPila.apilar(cima);
             pila.apilar(cima);
